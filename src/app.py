@@ -67,10 +67,10 @@ def generar_tabla_excel(datos):
     df.to_excel("files/datos_sql.xlsx", index=False)
     
   
-formato_datos = generar_formato_tabla()
-if sin_datos != []:
-    print(f"Faltan datos: --- {sin_datos} ---")
+# formato_datos = generar_formato_tabla()
+# if sin_datos != []:
+#     print(f"Faltan datos: --- {sin_datos} ---")
     
-print("Datos correctos... Generando datos.")
+# print("Datos correctos... Generando datos.")
 # generar_tabla_excel(formato_datos)
 
