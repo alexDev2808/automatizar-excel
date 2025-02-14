@@ -12,7 +12,7 @@ def formatear_tabla(table, **cols):
     return new_table    
     
 areas = formatear_tabla(t_areas, id_area=0, nombre_area=1)
-puestos = formatear_tabla(t_Det_Funcion, id_funcion=0, nombre_puesto=1)
+puestos = formatear_tabla(t_Det_Funcion, id_puesto=0, nombre_puesto=1)
 responsables_area = formatear_tabla(t_dig_area_auto, id_res_area=0, area=1, nombre_res=2)
 areas_internas = formatear_tabla(t_dig_areat, id_areat=0, nombre_areat=1)
 tipo_puesto = formatear_tabla(t_dig_tipoPuesto, id_tipoPuesto=0, nombre=1)
