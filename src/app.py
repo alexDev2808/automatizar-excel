@@ -53,7 +53,7 @@ def buscar_en_tabla(tabla, nombre_columna, valor_buscar):
     for item in tabla:
         if valor_buscar == item[f"nombre_{nombre_columna}"]:
             return item[f"id_{nombre_columna}"]
-    sin_datos.append(dict( columna = f"id_{nombre_columna}", valor_buscado = valor_buscar ))
+    sin_datos.append(dict( columna = f"id_{nombre_columna}", valor_buscado = valor_buscar, tabla = tabla ))
     return None
 
 def buscar_colaboradores(tabla, nombre_columna, valor_buscar):
@@ -61,7 +61,7 @@ def buscar_colaboradores(tabla, nombre_columna, valor_buscar):
         for colaborador in item["colaboradores"]:
             if colaborador == valor_buscar:
                 return item[f"id_{nombre_columna}"]
-    sin_datos.append(dict( columna = f"Colaborador: ", valor_buscado = valor_buscar ))
+    sin_datos.append(dict( columna = f"Colaborador: ", valor_buscado = valor_buscar, tabla = tabla ))
     return None
 
 def generar_tabla_excel(datos):
@@ -129,9 +129,8 @@ def generar_tabla_excel(datos):
 formato_datos = generar_formato_tabla()
 if sin_datos != []:
     print(f"Faltan datos: --- {sin_datos} ---")
-   
- 
-print("Datos correctos... Generando datos.")
-generar_tabla_excel(formato_datos)
+else:    
+    print("Datos correctos... Generando datos.")
+    generar_tabla_excel(formato_datos)
 
 
